@@ -1,8 +1,7 @@
 challenge nahawe n'abantu babiri aribo
 
-1. [TITITOF](https://github.com/irakoze1) na
+1. [TITITOF](https://github.com/irakoze1)
 2. [LIONEL](https://github.com/Jean-Lionel)
 
-yo gukora code itorera inyishu aka kantu
+Yo gukora code itorera inyishu aka kantu nkaheza imbere y'itariki 10 ndamukiza 2023
 ![speedcube](./img.png)
-ntegerezwa kuba nayihejeje imbere y'itariki 10 ndamukiza 2023
