@@ -1,6 +1,7 @@
 challenge nahawe n'abantu babiri aribo
-[TITITOF] (https://github.com/irakoze1) na
-[LIONEL] (https://github.com/Jean-Lionel)
+
+1. [TITITOF](https://github.com/irakoze1) na
+2. [LIONEL](https://github.com/Jean-Lionel)
 
 yo gukora code itorera inyishu aka kantu
 ![speedcube](./img.png)
