@@ -7,7 +7,7 @@ class Point:
         return self.x == point.x
     
     def __hash__(self) -> int:
-        return hash([])
+        return hash(self.x)
 
 
 a = Point(2, 4)
