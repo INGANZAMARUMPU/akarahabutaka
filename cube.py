@@ -60,30 +60,64 @@ class SpeedCube:
     def right_1(self) -> "SpeedCube":
         new_s_c:SpeedCube = copy.deepcopy(self)
 
-        # new_s_c._11.
-        # new_s_c._12.
-        # new_s_c._13.
+        new_s_c._11.a_droite()
+        new_s_c._12.a_droite()
+        new_s_c._13.a_droite()
 
-        # new_s_c._21.
-        # new_s_c._22.
-        # new_s_c._23.
+        new_s_c._21.a_droite()
+        new_s_c._22.a_droite()
+        new_s_c._23.a_droite()
         
-        # new_s_c._31.
-        # new_s_c._32.
-        # new_s_c._33.
+        new_s_c._31.a_droite()
+        new_s_c._32.a_droite()
+        new_s_c._33.a_droite()
 
-        # new_s_c._41.
-        # new_s_c._42.
-        # new_s_c._43.
+        new_s_c._41.a_droite()
+        new_s_c._42.a_droite()
+        new_s_c._43.a_droite()
 
         return new_s_c
 
     def right_2(self) -> "SpeedCube":
         new_s_c = copy.deepcopy(self)
+
+        new_s_c._14.a_droite()
+        new_s_c._15.a_droite()
+        new_s_c._16.a_droite()
+
+        new_s_c._24.a_droite()
+        new_s_c._25.a_droite()
+        new_s_c._26.a_droite()
+        
+        new_s_c._34.a_droite()
+        new_s_c._35.a_droite()
+        new_s_c._36.a_droite()
+
+        new_s_c._44.a_droite()
+        new_s_c._45.a_droite()
+        new_s_c._46.a_droite()
+
         return new_s_c
 
     def right_3(self) -> "SpeedCube":
         new_s_c = copy.deepcopy(self)
+
+        new_s_c._17.a_droite()
+        new_s_c._18.a_droite()
+        new_s_c._19.a_droite()
+
+        new_s_c._27.a_droite()
+        new_s_c._28.a_droite()
+        new_s_c._29.a_droite()
+        
+        new_s_c._37.a_droite()
+        new_s_c._38.a_droite()
+        new_s_c._39.a_droite()
+
+        new_s_c._47.a_droite()
+        new_s_c._48.a_droite()
+        new_s_c._49.a_droite()
+        
         return new_s_c
 
     def left_1(self) -> "SpeedCube":
