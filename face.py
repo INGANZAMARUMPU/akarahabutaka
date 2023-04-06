@@ -18,14 +18,14 @@ class Node:
         self.c5 = c5
         self.c6 = c6
     
-    def a_gauche(self):
+    def move_1to4(self):
         self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c4, self.c1, self.c2, self.c3, self.c5, self.c6
 
-    def a_droite(self):
+    def move_4to1(self):
         self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c2, self.c3, self.c4, self.c1, self.c5, self.c6
 
-    def en_haut(self):
+    def move_1to6(self):
         self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c6, self.c2, self.c5, self.c4, self.c1, self.c3
 
-    def en_bas(self):
+    def move_6to1(self):
         self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c5, self.c2, self.c6, self.c4, self.c3, self.c1

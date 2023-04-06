@@ -57,152 +57,191 @@ class SpeedCube:
     def __hash__(self) -> int:
         return hash(str(self))
 
-    def right_1(self) -> "SpeedCube":
+    def move_4to1_1(self) -> "SpeedCube":
         new_s_c:SpeedCube = copy.deepcopy(self)
 
-        new_s_c._11.a_droite()
-        new_s_c._12.a_droite()
-        new_s_c._13.a_droite()
+        new_s_c._11.move_4to1()
+        new_s_c._12.move_4to1()
+        new_s_c._13.move_4to1()
 
-        new_s_c._21.a_droite()
-        new_s_c._22.a_droite()
-        new_s_c._23.a_droite()
+        new_s_c._21.move_4to1()
+        new_s_c._22.move_4to1()
+        new_s_c._23.move_4to1()
         
-        new_s_c._31.a_droite()
-        new_s_c._32.a_droite()
-        new_s_c._33.a_droite()
+        new_s_c._31.move_4to1()
+        new_s_c._32.move_4to1()
+        new_s_c._33.move_4to1()
 
-        new_s_c._41.a_droite()
-        new_s_c._42.a_droite()
-        new_s_c._43.a_droite()
+        new_s_c._41.move_4to1()
+        new_s_c._42.move_4to1()
+        new_s_c._43.move_4to1()
 
         return new_s_c
 
-    def right_2(self) -> "SpeedCube":
+    def move_4to1_2(self) -> "SpeedCube":
         new_s_c = copy.deepcopy(self)
 
-        new_s_c._14.a_droite()
-        new_s_c._15.a_droite()
-        new_s_c._16.a_droite()
+        new_s_c._14.move_4to1()
+        new_s_c._15.move_4to1()
+        new_s_c._16.move_4to1()
 
-        new_s_c._24.a_droite()
-        new_s_c._25.a_droite()
-        new_s_c._26.a_droite()
+        new_s_c._24.move_4to1()
+        new_s_c._25.move_4to1()
+        new_s_c._26.move_4to1()
         
-        new_s_c._34.a_droite()
-        new_s_c._35.a_droite()
-        new_s_c._36.a_droite()
+        new_s_c._34.move_4to1()
+        new_s_c._35.move_4to1()
+        new_s_c._36.move_4to1()
 
-        new_s_c._44.a_droite()
-        new_s_c._45.a_droite()
-        new_s_c._46.a_droite()
+        new_s_c._44.move_4to1()
+        new_s_c._45.move_4to1()
+        new_s_c._46.move_4to1()
 
         return new_s_c
 
-    def right_3(self) -> "SpeedCube":
+    def move_4to1_3(self) -> "SpeedCube":
         new_s_c = copy.deepcopy(self)
 
-        new_s_c._17.a_droite()
-        new_s_c._18.a_droite()
-        new_s_c._19.a_droite()
+        new_s_c._17.move_4to1()
+        new_s_c._18.move_4to1()
+        new_s_c._19.move_4to1()
 
-        new_s_c._27.a_droite()
-        new_s_c._28.a_droite()
-        new_s_c._29.a_droite()
+        new_s_c._27.move_4to1()
+        new_s_c._28.move_4to1()
+        new_s_c._29.move_4to1()
         
-        new_s_c._37.a_droite()
-        new_s_c._38.a_droite()
-        new_s_c._39.a_droite()
+        new_s_c._37.move_4to1()
+        new_s_c._38.move_4to1()
+        new_s_c._39.move_4to1()
 
-        new_s_c._47.a_droite()
-        new_s_c._48.a_droite()
-        new_s_c._49.a_droite()
+        new_s_c._47.move_4to1()
+        new_s_c._48.move_4to1()
+        new_s_c._49.move_4to1()
         
         return new_s_c
 
-    def left_1(self) -> "SpeedCube":
+    def move_1to4_1(self) -> "SpeedCube":
         new_s_c:SpeedCube = copy.deepcopy(self)
 
-        new_s_c._11.a_gauche()
-        new_s_c._12.a_gauche()
-        new_s_c._13.a_gauche()
+        new_s_c._11.move_1to4()
+        new_s_c._12.move_1to4()
+        new_s_c._13.move_1to4()
 
-        new_s_c._21.a_gauche()
-        new_s_c._22.a_gauche()
-        new_s_c._23.a_gauche()
+        new_s_c._21.move_1to4()
+        new_s_c._22.move_1to4()
+        new_s_c._23.move_1to4()
         
-        new_s_c._31.a_gauche()
-        new_s_c._32.a_gauche()
-        new_s_c._33.a_gauche()
+        new_s_c._31.move_1to4()
+        new_s_c._32.move_1to4()
+        new_s_c._33.move_1to4()
 
-        new_s_c._41.a_gauche()
-        new_s_c._42.a_gauche()
-        new_s_c._43.a_gauche()
+        new_s_c._41.move_1to4()
+        new_s_c._42.move_1to4()
+        new_s_c._43.move_1to4()
 
         return new_s_c
 
-    def left_2(self) -> "SpeedCube":
+    def move_1to4_2(self) -> "SpeedCube":
         new_s_c = copy.deepcopy(self)
 
-        new_s_c._14.a_gauche()
-        new_s_c._15.a_gauche()
-        new_s_c._16.a_gauche()
+        new_s_c._14.move_1to4()
+        new_s_c._15.move_1to4()
+        new_s_c._16.move_1to4()
 
-        new_s_c._24.a_gauche()
-        new_s_c._25.a_gauche()
-        new_s_c._26.a_gauche()
+        new_s_c._24.move_1to4()
+        new_s_c._25.move_1to4()
+        new_s_c._26.move_1to4()
         
-        new_s_c._34.a_gauche()
-        new_s_c._35.a_gauche()
-        new_s_c._36.a_gauche()
+        new_s_c._34.move_1to4()
+        new_s_c._35.move_1to4()
+        new_s_c._36.move_1to4()
 
-        new_s_c._44.a_gauche()
-        new_s_c._45.a_gauche()
-        new_s_c._46.a_gauche()
+        new_s_c._44.move_1to4()
+        new_s_c._45.move_1to4()
+        new_s_c._46.move_1to4()
 
         return new_s_c
 
-    def left_3(self) -> "SpeedCube":
+    def move_1to4_3(self) -> "SpeedCube":
         new_s_c = copy.deepcopy(self)
 
-        new_s_c._17.a_gauche()
-        new_s_c._18.a_gauche()
-        new_s_c._19.a_gauche()
+        new_s_c._17.move_1to4()
+        new_s_c._18.move_1to4()
+        new_s_c._19.move_1to4()
 
-        new_s_c._27.a_gauche()
-        new_s_c._28.a_gauche()
-        new_s_c._29.a_gauche()
+        new_s_c._27.move_1to4()
+        new_s_c._28.move_1to4()
+        new_s_c._29.move_1to4()
         
-        new_s_c._37.a_gauche()
-        new_s_c._38.a_gauche()
-        new_s_c._39.a_gauche()
+        new_s_c._37.move_1to4()
+        new_s_c._38.move_1to4()
+        new_s_c._39.move_1to4()
 
-        new_s_c._47.a_gauche()
-        new_s_c._48.a_gauche()
-        new_s_c._49.a_gauche()
+        new_s_c._47.move_1to4()
+        new_s_c._48.move_1to4()
+        new_s_c._49.move_1to4()
         
         return new_s_c
 
-    def up_1(self) -> "SpeedCube":
+    def move_6to1_1(self) -> "SpeedCube":
         new_s_c = copy.deepcopy(self)
+
+        new_s_c._11.move_6to1()
+        new_s_c._41.move_6to1()
+        new_s_c._71.move_6to1()
+
+        new_s_c._16.move_6to1()
+        new_s_c._46.move_6to1()
+        new_s_c._76.move_6to1()
+
+        new_s_c._13.move_6to1()
+        new_s_c._43.move_6to1()
+        new_s_c._73.move_6to1()
+
+        new_s_c._15.move_6to1()
+        new_s_c._45.move_6to1()
+        new_s_c._75.move_6to1()
+
         return new_s_c
 
-    def up_2(self) -> "SpeedCube":
+    def move_6to1_2(self) -> "SpeedCube":
         new_s_c = copy.deepcopy(self)
+
+        new_s_c._21.move_6to1()
+        new_s_c._51.move_6to1()
+        new_s_c._81.move_6to1()
+
+        new_s_c._26.move_6to1()
+        new_s_c._56.move_6to1()
+        new_s_c._86.move_6to1()
+
+        new_s_c._23.move_6to1()
+        new_s_c._53.move_6to1()
+        new_s_c._83.move_6to1()
+
+        new_s_c._25.move_6to1()
+        new_s_c._55.move_6to1()
+        new_s_c._85.move_6to1()
+
         return new_s_c
 
-    def up_3(self) -> "SpeedCube":
+    def move_6to1_3(self) -> "SpeedCube":
         new_s_c = copy.deepcopy(self)
-        return new_s_c
 
-    def down_1(self) -> "SpeedCube":
-        new_s_c = copy.deepcopy(self)
-        return new_s_c
+        new_s_c._31.move_6to1()
+        new_s_c._61.move_6to1()
+        new_s_c._91.move_6to1()
 
-    def down_2(self) -> "SpeedCube":
-        new_s_c = copy.deepcopy(self)
-        return new_s_c
+        new_s_c._36.move_6to1()
+        new_s_c._66.move_6to1()
+        new_s_c._96.move_6to1()
 
-    def down_3(self) -> "SpeedCube":
-        new_s_c = copy.deepcopy(self)
+        new_s_c._33.move_6to1()
+        new_s_c._63.move_6to1()
+        new_s_c._93.move_6to1()
+
+        new_s_c._35.move_6to1()
+        new_s_c._65.move_6to1()
+        new_s_c._95.move_6to1()
+
         return new_s_c
