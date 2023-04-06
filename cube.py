@@ -72,10 +72,6 @@ class SpeedCube:
         new_s_c._32.move_4to1()
         new_s_c._33.move_4to1()
 
-        new_s_c._41.move_4to1()
-        new_s_c._42.move_4to1()
-        new_s_c._43.move_4to1()
-
         return new_s_c
 
     def move_4to1_2(self) -> "SpeedCube":
@@ -93,10 +89,6 @@ class SpeedCube:
         new_s_c._35.move_4to1()
         new_s_c._36.move_4to1()
 
-        new_s_c._44.move_4to1()
-        new_s_c._45.move_4to1()
-        new_s_c._46.move_4to1()
-
         return new_s_c
 
     def move_4to1_3(self) -> "SpeedCube":
@@ -113,10 +105,6 @@ class SpeedCube:
         new_s_c._37.move_4to1()
         new_s_c._38.move_4to1()
         new_s_c._39.move_4to1()
-
-        new_s_c._47.move_4to1()
-        new_s_c._48.move_4to1()
-        new_s_c._49.move_4to1()
         
         return new_s_c
 
@@ -135,10 +123,6 @@ class SpeedCube:
         new_s_c._32.move_1to4()
         new_s_c._33.move_1to4()
 
-        new_s_c._41.move_1to4()
-        new_s_c._42.move_1to4()
-        new_s_c._43.move_1to4()
-
         return new_s_c
 
     def move_1to4_2(self) -> "SpeedCube":
@@ -156,10 +140,6 @@ class SpeedCube:
         new_s_c._35.move_1to4()
         new_s_c._36.move_1to4()
 
-        new_s_c._44.move_1to4()
-        new_s_c._45.move_1to4()
-        new_s_c._46.move_1to4()
-
         return new_s_c
 
     def move_1to4_3(self) -> "SpeedCube":
@@ -176,10 +156,6 @@ class SpeedCube:
         new_s_c._37.move_1to4()
         new_s_c._38.move_1to4()
         new_s_c._39.move_1to4()
-
-        new_s_c._47.move_1to4()
-        new_s_c._48.move_1to4()
-        new_s_c._49.move_1to4()
         
         return new_s_c
 
@@ -187,19 +163,15 @@ class SpeedCube:
         new_s_c = copy.deepcopy(self)
 
         new_s_c._11.move_6to1()
-        new_s_c._41.move_6to1()
         new_s_c._71.move_6to1()
 
         new_s_c._16.move_6to1()
-        new_s_c._46.move_6to1()
         new_s_c._76.move_6to1()
 
         new_s_c._13.move_6to1()
-        new_s_c._43.move_6to1()
         new_s_c._73.move_6to1()
 
         new_s_c._15.move_6to1()
-        new_s_c._45.move_6to1()
         new_s_c._75.move_6to1()
 
         return new_s_c
@@ -250,19 +222,15 @@ class SpeedCube:
         new_s_c = copy.deepcopy(self)
 
         new_s_c._11.move_1to6()
-        new_s_c._41.move_1to6()
         new_s_c._71.move_1to6()
 
         new_s_c._16.move_1to6()
-        new_s_c._46.move_1to6()
         new_s_c._76.move_1to6()
 
         new_s_c._13.move_1to6()
-        new_s_c._43.move_1to6()
         new_s_c._73.move_1to6()
 
         new_s_c._15.move_1to6()
-        new_s_c._45.move_1to6()
         new_s_c._75.move_1to6()
 
         return new_s_c
