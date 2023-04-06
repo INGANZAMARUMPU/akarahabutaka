@@ -10,22 +10,22 @@ class color(Enum):
     WHITE = "white"
 
 class Node:
-    def __init__(self, c_1:color, c_2:color, c_3:color, c_4:color, c_5:color, c_6:color):
-        self.c_1 = c_1
-        self.c_2 = c_2
-        self.c_3 = c_3
-        self.c_4 = c_4
-        self.c_5 = c_5
-        self.c_6 = c_6
+    def __init__(self, c1:color, c2:color, c3:color, c4:color, c5:color, c6:color):
+        self.c1 = c1
+        self.c2 = c2
+        self.c3 = c3
+        self.c4 = c4
+        self.c5 = c5
+        self.c6 = c6
     
     def a_gauche(self):
-        self.c_1, self.c_2, self.c_3, self.c_4, self.c_5, self.c_6 = self.c_4, self.c_1, self.c_2, self.c_3, self.c_5, self.c_6
+        self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c4, self.c1, self.c2, self.c3, self.c5, self.c6
 
     def a_droite(self):
-        self.c_1, self.c_2, self.c_3, self.c_4, self.c_5, self.c_6 = self.c_2, self.c_3, self.c_4, self.c_1, self.c_5, self.c_6
+        self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c2, self.c3, self.c4, self.c1, self.c5, self.c6
 
     def en_haut(self):
-        self.c_1, self.c_2, self.c_3, self.c_4, self.c_5, self.c_6 = self.c_6, self.c_2, self.c_5, self.c_4, self.c_1, self.c_3
+        self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c6, self.c2, self.c5, self.c4, self.c1, self.c3
 
     def en_bas(self):
-        self.c_1, self.c_2, self.c_3, self.c_4, self.c_5, self.c_6 = self.c_5, self.c_2, self.c_6, self.c_4, self.c_3, self.c_1
+        self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c5, self.c2, self.c6, self.c4, self.c3, self.c1

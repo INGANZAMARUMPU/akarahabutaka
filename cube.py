@@ -1,6 +1,7 @@
+import copy
 from .face import Node, color
 
-class Cube:
+class SpeedCube:
     def __init__(self):
         _11:Node = Node(color.RED, None, None, color.WHITE, color.BLUE, None)
         _12:Node = Node(color.RED, None, None, None, color.GREEN, None)
@@ -31,7 +32,75 @@ class Cube:
         _37:Node = Node(None, None, color.YELLOW, color.BLUE, None, color.ORANGE)
         _38:Node = Node(None, None, color.RED, None, None, color.BLUE)
         _39:Node = Node(None, color.GREEN, color.YELLOW, None, None, color.ORANGE)
+
+    @property
+    def faces(self)->list:
+        return [
+            self._11.c1+self._12.c1+self._13.c1+self._14.c1+self._15.c1+self._16.c1+self._17.c1+self._18.c1+self._19.c1,
+            self._13.c2+self._23.c2+self._33.c2+self._16.c2+self._26.c2+self._36.c2+ self._19.c2+self._29.c2+self._39.c2,
+            self._33.c3+self._32.c3+self._31.c3+self._36.c3+self._35.c3+self._34.c3+self._39.c3+self._38.c3+self._37.c3,
+            self
+            self
+            self
+        ]
     
+    @property
     def is_done(self):
-        return self._11.c_1==self._12.c_1==self._13.c_1==self._14.c_1==self._15.c_1==self._16.c_1==self._17.c_1==self._18.c_1==self._19.c_1
-            
+        return self._11.c1==self._12.c1==self._13.c1==self._14.c1==self._15.c1==self._16.c1==self._17.c1==self._18.c1==self._19.c1
+
+    def __str__(self) -> str:
+        return "".join(sorted(self.faces))
+
+    def __eq__(self, cube:"SpeedCube") -> bool:
+        return str(self) == str(cube)
+    
+    def __hash__(self) -> int:
+        return hash(str(self))
+
+    def right_1(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def right_2(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def right_3(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def left_1(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def left_2(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def left_3(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def up_1(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def up_2(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def up_3(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def down_1(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def down_2(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
+
+    def down_3(self) -> "SpeedCube":
+        new_speed_cube = copy.deepcopy(self)
+        return new_speed_cube
