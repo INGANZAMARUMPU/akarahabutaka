@@ -29,3 +29,9 @@ class Node:
 
     def move_6to1(self):
         self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c5, self.c2, self.c6, self.c4, self.c3, self.c1
+
+    def move_6to4(self):
+        self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c1, self.c6, self.c3, self.c5, self.c2, self.c4
+
+    def move_4to6(self):
+        self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 = self.c1, self.c5, self.c3, self.c4, self.c6, self.c2
