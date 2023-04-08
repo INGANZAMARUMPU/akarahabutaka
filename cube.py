@@ -95,45 +95,6 @@ class SpeedCube:
     def __hash__(self) -> int:
         return hash(str(self))
 
-    def move_4to1_1(self):
-        self._11.move_4to1()
-        self._12.move_4to1()
-        self._13.move_4to1()
-
-        self._21.move_4to1()
-        self._22.move_4to1()
-        self._23.move_4to1()
-        
-        self._31.move_4to1()
-        self._32.move_4to1()
-        self._33.move_4to1()
-
-    def move_4to1_2(self):
-        self._14.move_4to1()
-        self._15.move_4to1()
-        self._16.move_4to1()
-
-        self._24.move_4to1()
-        self._25.move_4to1()
-        self._26.move_4to1()
-        
-        self._34.move_4to1()
-        self._35.move_4to1()
-        self._36.move_4to1()
-
-    def move_4to1_3(self):
-        self._17.move_4to1()
-        self._18.move_4to1()
-        self._19.move_4to1()
-
-        self._27.move_4to1()
-        self._28.move_4to1()
-        self._29.move_4to1()
-        
-        self._37.move_4to1()
-        self._38.move_4to1()
-        self._39.move_4to1()
-
     def move_1to4_1(self):
         self._11.move_1to4()
         self._12.move_1to4()
@@ -176,45 +137,6 @@ class SpeedCube:
         self._38.move_1to4()
         self._39.move_1to4()
 
-    def move_6to1_1(self):
-        self._11.move_6to1()
-        self._14.move_6to1()
-        self._17.move_6to1()
-
-        self._21.move_6to1()
-        self._24.move_6to1()
-        self._27.move_6to1()
-
-        self._31.move_6to1()
-        self._34.move_6to1()
-        self._37.move_6to1()
-
-    def move_6to1_2(self):
-        self._12.move_6to1()
-        self._15.move_6to1()
-        self._18.move_6to1()
-
-        self._22.move_6to1()
-        self._25.move_6to1()
-        self._28.move_6to1()
-
-        self._33.move_6to1()
-        self._36.move_6to1()
-        self._39.move_6to1()
-
-    def move_6to1_3(self):
-        self._13.move_6to1()
-        self._16.move_6to1()
-        self._19.move_6to1()
-
-        self._23.move_6to1()
-        self._26.move_6to1()
-        self._29.move_6to1()
-
-        self._33.move_6to1()
-        self._36.move_6to1()
-        self._39.move_6to1()
-
     def move_1to6_1(self):
         self._11.move_1to6()
         self._14.move_1to6()
@@ -254,80 +176,41 @@ class SpeedCube:
         self._36.move_1to6()
         self._39.move_1to6()
 
-    def move_6to4_1(self):
-        self._11.move_6to4()
-        self._12.move_6to4()
-        self._13.move_6to4()
-
-        self._14.move_6to4()
-        self._15.move_6to4()
-        self._16.move_6to4()
-
-        self._17.move_6to4()
-        self._18.move_6to4()
-        self._19.move_6to4()
-
-    def move_6to4_2(self):
-        self._21.move_6to4()
-        self._22.move_6to4()
-        self._23.move_6to4()
-
-        self._24.move_6to4()
-        self._25.move_6to4()
-        self._26.move_6to4()
-
-        self._27.move_6to4()
-        self._28.move_6to4()
-        self._29.move_6to4()
-
-    def move_6to4_3(self):
-        self._31.move_6to4()
-        self._32.move_6to4()
-        self._33.move_6to4()
-
-        self._34.move_6to4()
-        self._35.move_6to4()
-        self._36.move_6to4()
-
-        self._37.move_6to4()
-        self._38.move_6to4()
-        self._39.move_6to4()
-
-    def move_4_1to6(self):
+    def move_4to6_1(self):
         self._11.move_4to6()
-        self._12.move_4to6()
-        self._13.move_4to6()
-
         self._14.move_4to6()
-        self._15.move_4to6()
-        self._16.move_4to6()
-
         self._17.move_4to6()
+
+        self._21.move_4to6()
+        self._24.move_4to6()
+        self._27.move_4to6()
+
+        self._31.move_4to6()
+        self._34.move_4to6()
+        self._37.move_4to6()
+
+    def move_4to6_2(self):
+        self._12.move_4to6()
+        self._15.move_4to6()
         self._18.move_4to6()
+
+        self._22.move_4to6()
+        self._25.move_4to6()
+        self._28.move_4to6()
+
+        self._33.move_4to6()
+        self._36.move_4to6()
+        self._39.move_4to6()
+
+    def move_4to6_3(self):
+        self._13.move_4to6()
+        self._16.move_4to6()
         self._19.move_4to6()
 
-    def move_4_2to6(self):
-        self._21.move_4to6()
-        self._22.move_4to6()
         self._23.move_4to6()
-
-        self._24.move_4to6()
-        self._25.move_4to6()
         self._26.move_4to6()
-
-        self._27.move_4to6()
-        self._28.move_4to6()
         self._29.move_4to6()
 
-    def move_4_3to6(self):
-        self._31.move_4to6()
-        self._32.move_4to6()
         self._33.move_4to6()
-
-        self._34.move_4to6()
-        self._35.move_4to6()
         self._36.move_4to6()
-
-        self._37.move_4to6()
-        self._38.move_4to6()
         self._39.move_4to6()
