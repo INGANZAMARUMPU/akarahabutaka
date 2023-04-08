@@ -29,3 +29,15 @@ class Node:
     def move_4to6(self):
         self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 =\
         self.c1, self.c5, self.c3, self.c4, self.c6, self.c2
+
+    def __str__(self):
+        null = " "*6
+
+        c1 = self.c1.value if self.c1 else "xxxxxx"
+        c2 = self.c2.value if self.c2 else "xxxxxx"
+        c3 = self.c3.value if self.c3 else "xxxxxx"
+        c4 = self.c4.value if self.c4 else "xxxxxx"
+        c5 = self.c5.value if self.c5 else "xxxxxx"
+        c6 = self.c6.value if self.c6 else "xxxxxx"
+
+        return f"{null} {c5:6} {null*2}\n{c4:6} {c1:6} {c2:6} {c3:6}\n{null} {c6:6}"
