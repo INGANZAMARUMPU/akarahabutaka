@@ -33,6 +33,8 @@ class SpeedCube:
         self._38:Node = Node(None, None, Color.ORANGE, None, None, Color.WHITE)
         self._39:Node = Node(None, Color.GREEN, Color.ORANGE, None, None, Color.WHITE)
 
+        self.steps = []
+
     @property
     def faces(self)->List[List[Color]]:
         return [
@@ -175,14 +177,15 @@ class SpeedCube:
         self._13, self._16, self._19, self._12, self._15, self._18, self._11, self._14, self._17
 
     def move_4to6_3(self):
-        self._13.move_4to6()
-        self._16.move_4to6()
-        self._19.move_4to6()
-
-        self._23.move_4to6()
-        self._26.move_4to6()
-        self._29.move_4to6()
-
+        self._31.move_4to6()
+        self._32.move_4to6()
         self._33.move_4to6()
+        self._34.move_4to6()
+        self._35.move_4to6()
         self._36.move_4to6()
+        self._37.move_4to6()
+        self._38.move_4to6()
         self._39.move_4to6()
+        
+        self._31, self._32, self._33, self._34, self._35, self._36, self._37, self._38, self._39 =\
+        self._33, self._36, self._39, self._32, self._35, self._38, self._31, self._34, self._37
