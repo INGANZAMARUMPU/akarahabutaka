@@ -81,6 +81,22 @@ class SpeedCube:
             self._17.c6==self._18.c6==self._19.c6==self._27.c6==self._28.c6==self._29.c6==self._37.c6==self._38.c6==self._39.c6
         )
     
+    def __eq__(self, cube:"SpeedCube") -> bool:
+        return str(self.faces) == str(cube.faces)
+    
+    def __hash__(self) -> int:
+        return hash(sorted(self.faces))
+    
+    def step_excuded(self, step) -> bool:
+        if(len(self.steps) < 0):
+            return False
+        if self.steps[-1] == step:
+            return True
+        if len(self.steps) < 3: return False
+
+        if self.steps[-1] == self.steps[-2] == self.steps[-3] == step:
+            return True
+    
     def face(self, number) -> str:
         if number < 1 or number > 6: return "[ERREUR] seul les faces [1 - 6] sont valides"
         face = f"Face Numero {number}\n"
@@ -90,12 +106,6 @@ class SpeedCube:
             else:
                 face += (f"{f.value:6}" if f else "XXX   ") +" "
         return face
-    
-    def __eq__(self, cube:"SpeedCube") -> bool:
-        return str(self.faces) == str(cube.faces)
-    
-    def __hash__(self) -> int:
-        return hash(sorted(self.faces))
 
     def move_4to1_1(self):
         self._11.move_1to4()
