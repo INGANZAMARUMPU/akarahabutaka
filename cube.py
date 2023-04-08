@@ -93,7 +93,7 @@ class SpeedCube:
         return str(self.faces) == str(cube.faces)
     
     def __hash__(self) -> int:
-        return hash(str(self))
+        return hash(sorted(self.faces))
 
     def move_4to1_1(self):
         self._11.move_1to4()
@@ -139,6 +139,9 @@ class SpeedCube:
         self._31.move_1to6()
         self._34.move_1to6()
         self._37.move_1to6()
+        
+        self._11, self._14, self._17, self._21, self._24, self._27, self._31, self._34, self._37 =\
+        self._17, self._27, self._37, self._14, self._24, self._34, self._11, self._21, self._31
 
     def move_1to6_3(self):
         self._13.move_1to6()
