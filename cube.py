@@ -155,6 +155,10 @@ class SpeedCube:
         self._33.move_1to6()
         self._36.move_1to6()
         self._39.move_1to6()
+        
+        self._13, self._16, self._19, self._23, self._26, self._29, self._33, self._36, self._39 =\
+        self._19, self._29, self._39, self._16, self._26, self._36, self._13, self._23, self._33
+        
 
     def move_4to6_1(self):
         self._11.move_4to6()
