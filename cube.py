@@ -1,25 +1,26 @@
 import copy
-from .face import Node, color
+from typing import List
+from face import Node, color
 
 class SpeedCube:
     def __init__(self):
         self._11:Node = Node(color.RED, None, None, color.BLUE, color.YELLOW, None)
-        self._12:Node = Node(color.RED, None, None, color.YELLOW, None)
-        self._13:Node = Node(color.RED, color.GREEN, None, color.YELLOW, None)
+        self._12:Node = Node(color.RED, None, None, None, color.YELLOW, None)
+        self._13:Node = Node(color.RED, color.GREEN, None, None, color.YELLOW, None)
         self._14:Node = Node(color.RED, None, None, color.BLUE, None, None)
-        self._15:Node = Node(color.RED, None, None, None, None)
-        self._16:Node = Node(color.RED, color.GREEN, None, None, None)
+        self._15:Node = Node(color.RED, None, None, None, None, None)
+        self._16:Node = Node(color.RED, color.GREEN, None, None, None, None)
         self._17:Node = Node(color.RED, None, None, color.BLUE, None, color.WHITE)
-        self._18:Node = Node(color.RED, None, None, None, color.WHITE)
-        self._19:Node = Node(color.RED, color.GREEN, None, None, color.WHITE)
+        self._18:Node = Node(color.RED, None, None, None, None, color.WHITE)
+        self._19:Node = Node(color.RED, color.GREEN, None, None, None, color.WHITE)
 
-        self._21:Node = Node( None, None, None, None, color.BLUE, color.YELLOW, None)
+        self._21:Node = Node( None, None, None, color.BLUE, color.YELLOW, None)
         self._22:Node = Node( None, None, None, None, color.YELLOW, None)
         self._23:Node = Node( None, color.GREEN, None, None, color.YELLOW, None)
-        self._24:Node = Node( None, None, None, None, color.BLUE, None, None)
+        self._24:Node = Node( None, None, None, color.BLUE, None, None)
         self._25:Node = Node( None, None, None, None, None, None)
         self._26:Node = Node( None, color.GREEN, None, None, None, None)
-        self._27:Node = Node( None, None, None, None, color.BLUE, None, color.WHITE)
+        self._27:Node = Node( None, None, None,  color.BLUE, None, color.WHITE)
         self._28:Node = Node( None, None, None, None, None, color.WHITE)
         self._29:Node = Node( None, color.GREEN, None, None, None, color.WHITE)
 
@@ -34,18 +35,42 @@ class SpeedCube:
         self._39:Node = Node(None, color.GREEN, color.ORANGE, None, None, color.WHITE)
 
     @property
-    def faces(self)->list:
+    def faces(self)->List[List[color]]:
         return [
-            self._11.c1+self._12.c1+self._13.c1+self._14.c1+self._15.c1+self._16.c1+self._17.c1+self._18.c1+self._19.c1,
-            self._13.c2+self._16.c2+self._19.c2+self._23.c2+self._26.c2+self._29.c2+self._33.c2+self._36.c2+self._39.c2,
-            self._31.c3+self._32.c3+self._33.c3+self._34.c3+self._35.c3+self._36.c3+self._37.c3+self._38.c3+self._39.c3,
-            self._11.c4+self._14.c4+self._17.c4+self._21.c4+self._24.c4+self._27.c4+self._31.c4+self._34.c4+self._37.c4,
-            self._11.c5+self._12.c5+self._13.c5+self._21.c5+self._22.c5+self._23.c5+self._31.c5+self._32.c5+self._33.c5,
-            self._17.c6+self._18.c6+self._19.c6+self._27.c6+self._28.c6+self._29.c6+self._37.c6+self._38.c6+self._39.c6,
+            [
+                self._11.c1, self._12.c1, self._13.c1,
+                self._14.c1, self._15.c1, self._16.c1,
+                self._17.c1, self._18.c1, self._19.c1
+            ],
+            [
+                self._13.c2, self._16.c2, self._19.c2,
+                self._23.c2, self._26.c2, self._29.c2,
+                self._33.c2, self._36.c2, self._39.c2
+            ],
+            [
+                self._31.c3, self._32.c3, self._33.c3,
+                self._34.c3, self._35.c3, self._36.c3,
+                self._37.c3, self._38.c3, self._39.c3
+            ],
+            [
+                self._11.c4, self._14.c4, self._17.c4,
+                self._21.c4, self._24.c4, self._27.c4,
+                self._31.c4, self._34.c4, self._37.c4
+            ],
+            [
+                self._11.c5, self._12.c5, self._13.c5,
+                self._21.c5, self._22.c5, self._23.c5,
+                self._31.c5, self._32.c5, self._33.c5
+            ],
+            [
+                self._17.c6, self._18.c6, self._19.c6,
+                self._27.c6, self._28.c6, self._29.c6,
+                self._37.c6, self._38.c6, self._39.c6
+            ],
         ]
     
     @property
-    def is_done(self):
+    def is_done(self) -> bool:
         return (
             self._11.c1==self._12.c1==self._13.c1==self._14.c1==self._15.c1==self._16.c1==self._17.c1==self._18.c1==self._19.c1 and
             self._13.c2==self._16.c2==self._19.c2==self._23.c2==self._26.c2==self._29.c2==self._33.c2==self._36.c2==self._39.c2 and
@@ -54,7 +79,17 @@ class SpeedCube:
             self._11.c5==self._12.c5==self._13.c5==self._21.c5==self._22.c5==self._23.c5==self._31.c5==self._32.c5==self._33.c5 and
             self._17.c6==self._18.c6==self._19.c6==self._27.c6==self._28.c6==self._29.c6==self._37.c6==self._38.c6==self._39.c6
         )
-
+    
+    def face(self, number) -> str:
+        if number < 1 or number > 6: return "[ERREUR] la face demandé est invalide"
+        face = ""
+        for i, f in enumerate(self.faces[number]):
+            if(i%3 == 2):
+                face += f + "\n"
+            else:
+                face += f +" "
+        return face
+    
     def __str__(self) -> str:
         return "".join(sorted(self.faces))
 
