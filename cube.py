@@ -37,11 +37,11 @@ class SpeedCube:
     def faces(self)->list:
         return [
             self._11.c1+self._12.c1+self._13.c1+self._14.c1+self._15.c1+self._16.c1+self._17.c1+self._18.c1+self._19.c1,
-            self._21.c2+self._22.c2+self._23.c2+self._24.c2+self._25.c2+self._26.c2+self._27.c2+self._28.c2+self._29.c2,
+            self._13.c2+self._16.c2+self._19.c2+self._23.c2+self._26.c2+self._29.c2+self._33.c2+self._36.c2+self._39.c2,
             self._31.c3+self._32.c3+self._33.c3+self._34.c3+self._35.c3+self._36.c3+self._37.c3+self._38.c3+self._39.c3,
-            self._41.c4+self._42.c4+self._43.c4+self._44.c4+self._45.c4+self._46.c4+self._47.c4+self._48.c4+self._49.c4,
-            self._51.c5+self._52.c5+self._53.c5+self._54.c5+self._55.c5+self._56.c5+self._57.c5+self._58.c5+self._59.c5,
-            self._61.c6+self._62.c6+self._63.c6+self._64.c6+self._65.c6+self._66.c6+self._67.c6+self._68.c6+self._69.c6
+            self._11.c4+self._14.c4+self._17.c4+self._21.c4+self._24.c4+self._27.c4+self._31.c4+self._34.c4+self._37.c4,
+            self._11.c5+self._12.c5+self._13.c5+self._21.c5+self._22.c5+self._23.c5+self._31.c5+self._32.c5+self._33.c5,
+            self._11.c6+self._12.c6+self._13.c6+self._21.c6+self._22.c6+self._23.c6+self._31.c6+self._32.c6+self._33.c6,
         ]
     
     @property
