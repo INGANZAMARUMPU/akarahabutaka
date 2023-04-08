@@ -28,7 +28,7 @@ class Node:
 
     def move_4to6(self):
         self.c1, self.c2, self.c3, self.c4, self.c5, self.c6 =\
-        self.c1, self.c5, self.c3, self.c4, self.c6, self.c2
+        self.c1, self.c6, self.c3, self.c5, self.c2, self.c4
 
     def __str__(self):
         null = " "*6
