@@ -6,14 +6,15 @@ movements = [
 ]
 
 cube = SpeedCube()
+cube.move_1to6_1()
 
 founds = { cube }
 
 for i in range(40):
     cubes = set(founds)
     for current_cube in cubes:
-        if new_cube.current_level == 6:
-            cube = new_cube
+        if current_cube.current_level == 6:
+            cube = current_cube
             break
         new_cube = copy.deepcopy(current_cube)
         for movement in movements:

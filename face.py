@@ -9,6 +9,9 @@ class Color(Enum):
     YELLOW = "yellow"
     WHITE = "white"
 
+    def __lt__(self, other):
+        return self.value < other.value
+
 class Node:
     def __init__(self, c1:Color, c2:Color, c3:Color, c4:Color, c5:Color, c6:Color):
         self.c1 = c1
