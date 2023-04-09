@@ -99,7 +99,6 @@ class SpeedCube:
         return str(self.faces) == str(cube.faces)
     
     def __hash__(self) -> int:
-        print(self.steps)
         str_faces_list = []
         for face in self.faces:
             str_face = ""
@@ -109,12 +108,7 @@ class SpeedCube:
         return hash("".join(str_faces_list))
     
     def step_excuded(self, step) -> bool:
-        if(len(self.steps) == 0):
-            return False
-        if self.steps[-1] == step:
-            return True
         if len(self.steps) < 3: return False
-
         if self.steps[-1] == self.steps[-2] == self.steps[-3] == step:
             return True
     
