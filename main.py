@@ -1,6 +1,7 @@
 import copy
 import sys
 from cube import SpeedCube
+from face import Color
 
 MOVEMENTS = [
     "move_4to1_1", "move_4to1_3", "move_6to1_1", "move_6to1_3", "move_4to6_1", "move_4to6_3"
@@ -40,15 +41,41 @@ def solve(objective:SpeedCube):
             objective = found
     return objective.steps
 
-def askLine():
+def askLine() -> list:
+    dict_color = {
+        "R": Color.RED,
+        "G": Color.GREEN,
+        "B": Color.BLUE,
+        "O": Color.ORANGE,
+        "Y": Color.YELLOW,
+        "W": Color.WHITE,
+    }
     print("les couleurs: (R)ed (G)reen (B)lue (O)range (Y)ellow (W)hite")
     colors = []
     for y in range(3):
         ligne = []
         for x in range(3):
-            value = input(f"ligne {y+1} couleur {x+1}")
-            ligne.append(value)
+            value = input(f"ligne {y+1} couleur {x+1}: ")
+            color:Color = dict_color[value.upper()]
+            ligne.append(color)
         colors.append(ligne)
+    return colors
 
-def build():
+def build() -> SpeedCube:
+    cube = SpeedCube()
+    null = " "*7
+    print(f"{null}|FACE 5|{null*2}\n|FACE 4|FACE 1|FACE 2|FACE 3|\n{null}|FACE 6|")
+    print("Saisissez la face 1:")
+    colors = askLine()
+    cube._11.c1 = colors[0][0]
+    cube._12.c1 = colors[0][1]
+    cube._13.c1 = colors[0][2]
+    cube._14.c1 = colors[1][0]
+    cube._15.c1 = colors[1][1]
+    cube._16.c1 = colors[1][2]
+    cube._17.c1 = colors[2][0]
+    cube._18.c1 = colors[2][1]
+    cube._19.c1 = colors[2][2]
+    print(cube.face(1))
 
+build()
