@@ -37,8 +37,8 @@ class SpeedCube:
         self.actions = {
             "move_4to1_1": self.move_4to1_1,
             "move_4to1_3": self.move_4to1_3,
-            "move_1to6_1": self.move_1to6_1,
-            "move_1to6_3": self.move_1to6_3,
+            "move_6to1_1": self.move_6to1_1,
+            "move_6to1_3": self.move_6to1_3,
             "move_4to6_1": self.move_4to6_1,
             "move_4to6_3": self.move_4to6_3
         }
@@ -99,11 +99,12 @@ class SpeedCube:
         return str(self.faces) == str(cube.faces)
     
     def __hash__(self) -> int:
+        print(self.steps)
         str_faces_list = []
         for face in self.faces:
             str_face = ""
             for color in face:
-                str_face += color.value if color else "_"
+                str_face += color.value# if color else "_"
             str_faces_list.append(str_face)
         return hash("".join(str_faces_list))
     
@@ -157,9 +158,9 @@ class SpeedCube:
         self._39.move_1to4()
 
         self._17, self._18, self._19, self._27, self._28, self._29, self._37, self._38, self._39 =\
-        self._37, self._27, self._17, self._38, self._28, self._18, self._39, self._28, self._19
+        self._37, self._27, self._17, self._38, self._28, self._18, self._39, self._29, self._19
 
-    def move_1to6_1(self):
+    def move_6to1_1(self):
         self._11.move_1to6()
         self._14.move_1to6()
         self._17.move_1to6()
@@ -175,7 +176,7 @@ class SpeedCube:
         self._11, self._14, self._17, self._21, self._24, self._27, self._31, self._34, self._37 =\
         self._17, self._27, self._37, self._14, self._24, self._34, self._11, self._21, self._31
 
-    def move_1to6_3(self):
+    def move_6to1_3(self):
         self._13.move_1to6()
         self._16.move_1to6()
         self._19.move_1to6()
