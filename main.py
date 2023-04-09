@@ -105,21 +105,34 @@ def build() -> SpeedCube:
     # cube._39.c3 = colors[0][2]
     # print(cube.face(3))
 
-    print("Saisissez la face 4:")
+    # print("Saisissez la face 4:")
+    # colors = askLine()
+    # cube._11.c4 = colors[0][0]
+    # cube._14.c4 = colors[0][1]
+    # cube._17.c4 = colors[0][2]
+    # cube._21.c4 = colors[1][0]
+    # cube._24.c4 = colors[1][1]
+    # cube._27.c4 = colors[1][2]
+    # cube._31.c4 = colors[2][0]
+    # cube._34.c4 = colors[2][1]
+    # cube._37.c4 = colors[2][2]
+    # print(cube.face(4))
+
+    print("Saisissez la face 5:")
     colors = askLine()
-    cube._11.c4 = colors[0][0]
-    cube._14.c4 = colors[0][1]
-    cube._17.c4 = colors[0][2]
-    cube._21.c4 = colors[1][0]
-    cube._24.c4 = colors[1][1]
-    cube._27.c4 = colors[1][2]
-    cube._31.c4 = colors[2][0]
-    cube._34.c4 = colors[2][1]
-    cube._37.c4 = colors[2][2]
-    print(cube.face(4))
+    cube._11.c5 = colors[2][0]
+    cube._12.c5 = colors[2][1]
+    cube._13.c5 = colors[2][2]
+    cube._21.c5 = colors[1][0]
+    cube._22.c5 = colors[1][1]
+    cube._23.c5 = colors[1][2]
+    cube._31.c5 = colors[0][0]
+    cube._32.c5 = colors[0][1]
+    cube._33.c5 = colors[0][2]
+    print(cube.face(5))
 
     cube_2 = SpeedCube()
-    cube_2.move_4to1_1()
-    print(cube_2.face(4))
+    cube_2.move_4to6_1()
+    print(cube_2.face(5))
 
 build()
