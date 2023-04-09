@@ -71,15 +71,21 @@ class SpeedCube:
         ]
     
     @property
-    def is_done(self) -> bool:
-        return (
-            self._11.c1==self._12.c1==self._13.c1==self._14.c1==self._15.c1==self._16.c1==self._17.c1==self._18.c1==self._19.c1 and
-            self._13.c2==self._16.c2==self._19.c2==self._23.c2==self._26.c2==self._29.c2==self._33.c2==self._36.c2==self._39.c2 and
-            self._31.c3==self._32.c3==self._33.c3==self._34.c3==self._35.c3==self._36.c3==self._37.c3==self._38.c3==self._39.c3 and
-            self._11.c4==self._14.c4==self._17.c4==self._21.c4==self._24.c4==self._27.c4==self._31.c4==self._34.c4==self._37.c4 and
-            self._11.c5==self._12.c5==self._13.c5==self._21.c5==self._22.c5==self._23.c5==self._31.c5==self._32.c5==self._33.c5 and
-            self._17.c6==self._18.c6==self._19.c6==self._27.c6==self._28.c6==self._29.c6==self._37.c6==self._38.c6==self._39.c6
-        )
+    def current_level(self) -> bool:
+        level = 0
+        if self._11.c1==self._12.c1==self._13.c1==self._14.c1==self._15.c1==self._16.c1==self._17.c1==self._18.c1==self._19.c1:
+            level += 1
+        if self._13.c2==self._16.c2==self._19.c2==self._23.c2==self._26.c2==self._29.c2==self._33.c2==self._36.c2==self._39.c2:
+            level += 1
+        if self._31.c3==self._32.c3==self._33.c3==self._34.c3==self._35.c3==self._36.c3==self._37.c3==self._38.c3==self._39.c3:
+            level += 1
+        if self._11.c4==self._14.c4==self._17.c4==self._21.c4==self._24.c4==self._27.c4==self._31.c4==self._34.c4==self._37.c4:
+            level += 1
+        if self._11.c5==self._12.c5==self._13.c5==self._21.c5==self._22.c5==self._23.c5==self._31.c5==self._32.c5==self._33.c5:
+            level += 1
+        if self._17.c6==self._18.c6==self._19.c6==self._27.c6==self._28.c6==self._29.c6==self._37.c6==self._38.c6==self._39.c6:
+            level += 1
+        return level
     
     def __eq__(self, cube:"SpeedCube") -> bool:
         return str(self.faces) == str(cube.faces)
