@@ -215,6 +215,17 @@ class SpeedCube:
         self._31, self._32, self._33, self._34, self._35, self._36, self._37, self._38, self._39 =\
         self._33, self._36, self._39, self._32, self._35, self._38, self._31, self._34, self._37
 
+    def fill_face_1(self, colors:list) -> None:
+        self._11.c1 = colors[0][0]
+        self._12.c1 = colors[0][1]
+        self._13.c1 = colors[0][2]
+        self._14.c1 = colors[1][0]
+        self._15.c1 = colors[1][1]
+        self._16.c1 = colors[1][2]
+        self._17.c1 = colors[2][0]
+        self._18.c1 = colors[2][1]
+        self._19.c1 = colors[2][2]
+
     def perform(self, action) -> bool:
         if not self.step_excuded(action):
             self.actions[action]()
