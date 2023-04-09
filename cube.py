@@ -107,6 +107,12 @@ class SpeedCube:
             str_faces_list.append(str_face)
         return hash("".join(str_faces_list))
     
+    def __str__(self) ->str:
+        line1 = "\n".join([(" "*7*3) + line for line in self.face(5)[:-1].split('\n')])
+        line2 = "\n".join([f"{a:21}{b:21}{c:21}{d:21}" for a, b, c, d in zip(self.face(4).split('\n'), self.face(1).split('\n'), self.face(2).split('\n'),self.face(3)[:-1].split('\n'))])
+        line3 = "\n".join([(" "*7*3) + line for line in self.face(6).split('\n')])
+        return line1+"\n"+line2+"\n"+line3
+
     def step_excuded(self, step) -> bool:
         if len(self.steps) < 3: return False
         if self.steps[-1] == self.steps[-2] == self.steps[-3] == step:
@@ -225,6 +231,61 @@ class SpeedCube:
         self._17.c1 = colors[2][0]
         self._18.c1 = colors[2][1]
         self._19.c1 = colors[2][2]
+
+    def fill_face_2(self, colors:list) -> None:
+        self._13.c2 = colors[0][2]
+        self._16.c2 = colors[0][1]
+        self._19.c2 = colors[0][0]
+        self._23.c2 = colors[1][2]
+        self._26.c2 = colors[1][1]
+        self._29.c2 = colors[1][0]
+        self._33.c2 = colors[2][2]
+        self._36.c2 = colors[2][1]
+        self._39.c2 = colors[2][0]
+
+    def fill_face_3(self, colors:list) -> None:
+        self._31.c3 = colors[2][0]
+        self._32.c3 = colors[2][1]
+        self._33.c3 = colors[2][2]
+        self._34.c3 = colors[1][0]
+        self._35.c3 = colors[1][1]
+        self._36.c3 = colors[1][2]
+        self._37.c3 = colors[0][0]
+        self._38.c3 = colors[0][1]
+        self._39.c3 = colors[0][2]
+
+    def fill_face_4(self, colors:list) -> None:
+        self._11.c4 = colors[0][0]
+        self._14.c4 = colors[0][1]
+        self._17.c4 = colors[0][2]
+        self._21.c4 = colors[1][0]
+        self._24.c4 = colors[1][1]
+        self._27.c4 = colors[1][2]
+        self._31.c4 = colors[2][0]
+        self._34.c4 = colors[2][1]
+        self._37.c4 = colors[2][2]
+
+    def fill_face_5(self, colors:list) -> None:
+        self._11.c5 = colors[2][0]
+        self._12.c5 = colors[2][1]
+        self._13.c5 = colors[2][2]
+        self._21.c5 = colors[1][0]
+        self._22.c5 = colors[1][1]
+        self._23.c5 = colors[1][2]
+        self._31.c5 = colors[0][0]
+        self._32.c5 = colors[0][1]
+        self._33.c5 = colors[0][2]
+
+    def fill_face_6(self, colors:list) -> None:
+        self._17.c6 = colors[0][0]
+        self._18.c6 = colors[0][1]
+        self._19.c6 = colors[0][2]
+        self._27.c6 = colors[1][0]
+        self._28.c6 = colors[1][1]
+        self._29.c6 = colors[1][2]
+        self._37.c6 = colors[2][0]
+        self._38.c6 = colors[2][1]
+        self._39.c6 = colors[2][2]
 
     def perform(self, action) -> bool:
         if not self.step_excuded(action):
