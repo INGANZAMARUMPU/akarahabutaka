@@ -65,32 +65,60 @@ def build() -> SpeedCube:
     cube = SpeedCube()
     null = " "*7
     print(f"{null}|FACE 5|{null*2}\n|FACE 4|FACE 1|FACE 2|FACE 3|\n{null}|FACE 6|")
-    print(cube)
+    print("MURAHAWE IKAZE")
+    while True:
+        print("HITAMWO ICO MWIPFUZA")
+        print("0. Kubihagarika")
+        print("1. kwuzuza uruhande rwa 1")
+        print("2. kwuzuza uruhande rwa 2")
+        print("3. kwuzuza uruhande rwa 3")
+        print("4. kwuzuza uruhande rwa 4")
+        print("5. kwuzuza uruhande rwa 5")
+        print("6. kwuzuza uruhande rwa 6")
+        print("7. Kuraba uko cube iteye")
+        print("8. Gukosora")
+        choice = input()
     
-    # print("Saisissez la face 1:")
-    # colors = askLine()
+        if choice == "1":
+            print("Saisissez la face 1:")
+            colors = askLine()
+            cube.fill_face_1(colors)
 
-    # print("Saisissez la face 2:")
-    # colors = askLine()
-    # print(cube.face(2))
+        elif choice == "2":
+            print("Saisissez la face 2:")
+            colors = askLine()
+            cube.fill_face_2(colors)
 
-    # print("Saisissez la face 3:")
-    # colors = askLine()
+        elif choice == "3":
+            print("Saisissez la face 3:")
+            colors = askLine()
+            cube.fill_face_3(colors)
 
-    # print(cube.face(3))
+        elif choice == "4":
+            print("Saisissez la face 4:")
+            colors = askLine()
+            cube.fill_face_4(colors)
 
-    # print("Saisissez la face 4:")
-    # colors = askLine()
+        elif choice == "5":
+            print("Saisissez la face 5:")
+            colors = askLine()
+            cube.fill_face_5(colors)
 
-    # print(cube.face(4))
-
-    # print("Saisissez la face 5:")
-    # colors = askLine()
-
-    # print(cube.face(5))
-
-    # print("Saisissez la face 6:")
-    # colors = askLine()
-
+        elif choice == "6":
+            print("Saisissez la face 6:")
+            colors = askLine()
+            cube.fill_face_6(colors)
+        
+        elif choice == "7":
+            print(cube)
+        
+        elif choice == "8":
+            response = solve(cube)
+            print(response)
+        
+        elif choice == "0":
+            print("N'agasaga")
+            break
+        
 
 build()
