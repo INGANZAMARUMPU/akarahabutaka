@@ -34,6 +34,14 @@ class SpeedCube:
         self._39:Node = Node(None, Color.GREEN, Color.ORANGE, None, None, Color.WHITE)
 
         self.steps = []
+        self.actions = {
+            "move_4to1_1": self.move_4to1_1,
+            "move_4to1_3": self.move_4to1_3,
+            "move_1to6_1": self.move_1to6_1,
+            "move_1to6_3": self.move_1to6_3,
+            "move_4to6_1": self.move_4to6_1,
+            "move_4to6_3": self.move_4to6_3
+        }
 
     @property
     def faces(self)->List[List[Color]]:
@@ -205,3 +213,10 @@ class SpeedCube:
         
         self._31, self._32, self._33, self._34, self._35, self._36, self._37, self._38, self._39 =\
         self._33, self._36, self._39, self._32, self._35, self._38, self._31, self._34, self._37
+
+    def perform(self, action) -> bool:
+        if not self.step_excuded(action):
+            self.actions[action]()
+            self.steps.append(action)
+            return True
+        return False

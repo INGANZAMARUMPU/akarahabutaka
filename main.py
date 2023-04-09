@@ -11,8 +11,11 @@ founds = { cube }
 
 for i in range(40):
     cubes = set(founds)
-    for cube in cubes:
-        new_cube = copy.deepcopy(cube)
+    for current_cube in cubes:
+        if new_cube.current_level == 6:
+            cube = new_cube
+            break
+        new_cube = copy.deepcopy(current_cube)
         for movement in movements:
             performed = new_cube.perform(movement)
             if performed and new_cube not in founds:
